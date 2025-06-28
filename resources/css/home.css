@@ -1,0 +1,17 @@
+/* Home Page Styles */
+.home-background {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #4fbaf3d0, #9dcee8d0, #e2eaee, #add7ed, #4fbaf3d0);
+  background-size: 400% 400%;
+  animation: animate-background 8s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Navbar custom background */
+.navbar-bg-custom {
+  background: rgba(184, 217, 235, 0.19);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 1px 5px 0 rgba(2, 47, 69, 0.272);
+}
+

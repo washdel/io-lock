@@ -1,0 +1,1081 @@
+/* Manual Lock Control Toggle Styles */
+.manual-control-container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px 0 rgba(9, 53, 81, 0.25);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+.manual-control-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px 0 rgba(9, 53, 81, 0.3);
+}
+.manual-control-container h3 {
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 40px;
+  border: 2px solid #444249;
+  border-radius: 20px;
+  transition: border-color .6s ease-out;
+  box-sizing: border-box;
+}
+.toggle.toggle-on {
+  border-color: rgba(137, 194, 217, .4);
+  transition: all .5s .15s ease-out;
+}
+.toggle-button {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  right: 39px;
+  width: 28px;
+  background-color: #ffffff;
+  border-radius: 19px;
+  cursor: pointer;
+  transition: all .3s .1s, width .1s, top .1s, bottom .1s;
+}
+.toggle-on .toggle-button {
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  width: 65px;
+  border-radius: 23px;
+  background-color: #89c2da;
+  box-shadow: 0 0 16px #4b7a8d;
+  transition: all .2s .1s, right .1s;
+}
+.toggle-text-on,
+.toggle-text-off {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  line-height: 36px;
+
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle-text-off {
+    left: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444249;
+}
+.toggle-on .toggle-text-off {
+    color: rgba(0,0,0,0);
+    opacity: 0%;
+}
+.toggle-text-on {
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Quicksand', sans-serif;
+    color: rgba(0,0,0,0);
+    transition: color .3s .15s;
+}
+.toggle-on .toggle-text-on {
+    color: #3b6a7d;
+    padding-left: 0px;
+}
+.glow-comp {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border-radius: 6px;
+  background-color: rgba(75, 122, 141, .1);
+  box-shadow: 0 0 12px rgba(75, 122, 141, .2);
+  opacity: 0;
+  transition: opacity 4.5s 1s;
+}
+.toggle-on .glow-comp {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+/* Dashboard page container with login-style border background */
+.dashboard-container {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.199);
+  border-radius: 1rem;
+  box-shadow: 0 1px 10px 0 rgba(9, 53, 81, 0.327);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(65, 65, 65, 0.18);
+}
+
+/* Management User section responsive padding */
+@media (max-width: 992px) {
+  #management-user .col-12 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #management-user .col-12 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* Last Access table styling */
+#last-access-body .text-success {
+  font-weight: 700;
+  color: #28a745 !important;
+}
+
+#last-access-body .text-danger {
+  font-weight: 700;
+  color: #dc3545 !important;
+}
+
+#last-access-body tr:first-child {
+  background-color: rgba(6, 31, 46, 0.1);
+}
+
+/* Modern Gauges for Sensor Data */
+.modern-gauges-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gauge-card {
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gauge-card h4 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.gauge-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Humidity Gauge (Semi-circle) */
+.humidity-gauge {
+  position: relative;
+  margin: 0 auto;
+}
+
+.semicircle-gauge {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: #e6e6e6;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 100px 100px 0 0;
+  transition: height 1s ease-out;
+}
+
+.gauge-cover {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 90px 90px 0 0;
+}
+
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.gauge-min, .gauge-max {
+  font-size: 14px;
+  color: #777;
+}
+
+.gauge-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Temperature Gauge (Vertical) */
+.temperature-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-gauge {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+.temp-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-right: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.temp-bar-container {
+  position: relative;
+  width: 40px;
+  height: 100%;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.temp-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #12e8f3, #e74c3c);
+  border-radius: 0 0 20px 20px;
+  transition: height 1s ease-out;
+}
+
+.temp-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #e74c3c;
+}
+
+/* Remove background from sensor data table */
+#sensor-data table {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+#sensor-data table thead th {
+  background: rgba(6, 31, 46, 0.5);
+}
+
+/* Sortable table headers */
+.sortable-header {
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px !important;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.sortable-header:hover {
+  background-color: rgba(6, 31, 46, 0.7) !important;
+}
+
+.sort-icon {
+  display: inline-block;
+  font-style: normal;
+  position: absolute;
+  right: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sortable-header.active {
+  background-color: rgba(6, 31, 46, 0.9) !important;
+}
+
+.sortable-header.active .sort-icon {
+  color: #3498db;
+  opacity: 1;
+}
+
+/* Beautiful Table Styling with Glassmorphism Background */
+.table-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px 0 rgba(9, 53, 81, 0.25);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: none;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.table-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px 0 rgba(9, 53, 81, 0.3);
+}
+
+.table-container .table {
+  background: transparent;
+  border: none;
+  margin-bottom: 0;
+}
+
+.table-container .table thead th {
+  background: rgba(6, 31, 46, 0.4);
+  border: none;
+  color: rgba(253, 253, 253, 0.9);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  padding: 1rem 0.75rem;
+  position: relative;
+}
+
+.table-container .table thead th:first-child {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.table-container .table thead th:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.table-container .table tbody td {
+  border: none;
+  color: rgba(0, 0, 0, 0.85);
+  padding: 0.875rem 0.75rem;
+  background: transparent;
+  vertical-align: middle;
+}
+
+.table-container .table tbody tr {
+  border-bottom: none;
+  transition: all 0.3s ease;
+}
+
+.table-container .table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table-container .table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.table-container .table .btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.table-container .table .btn-primary {
+  background: rgba(52, 152, 219, 0.7);
+  color: white;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.table-container .table .btn-primary:hover {
+  background: rgba(52, 152, 219, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+.table-container .table .btn-danger {
+  background: rgba(231, 76, 60, 0.7);
+  color: white;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+}
+
+.table-container .table .btn-danger:hover {
+  background: rgba(231, 76, 60, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Status colors for access history */
+.table-container .table .text-success {
+  color: #2ecc71 !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(46, 204, 113, 0.3);
+}
+
+.table-container .table .text-danger {
+  color: #e74c3c !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(231, 76, 60, 0.3);
+}
+
+/* Override Bootstrap table styles */
+.table-container .table-striped > tbody > tr:nth-of-type(odd) > td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table-container .table-striped > tbody > tr:nth-of-type(even) > td {
+  background: transparent;
+}
+
+/* Responsive table adjustments */
+.table-container .table-responsive {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Enhanced sortable headers for sensor data */
+.table-container .sortable-header {
+  cursor: pointer;
+  position: relative;
+  padding-right: 30px !important;
+  user-select: none;
+  transition: all 0.3s ease;
+  background: rgba(6, 31, 46, 0.4) !important;
+}
+
+.table-container .sortable-header:hover {
+  background: rgba(6, 31, 46, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+.table-container .sortable-header.active {
+  background: rgba(6, 31, 46, 0.8) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.table-container .sort-icon {
+  display: inline-block;
+  font-style: normal;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.table-container .sortable-header.active .sort-icon {
+  color: #3498db;
+  opacity: 1;
+  text-shadow: 0 1px 2px rgba(52, 152, 219, 0.3);
+}
+
+/* Section titles styling */
+.section-title {
+  color: rgba(53, 53, 53, 0.9);
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+/* Enhanced Sidebar Navigation Active States */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.875rem 1rem;
+  color: rgba(0, 0, 0, 0.7) !important;
+  background: transparent;
+  border: 2px solid transparent;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(83, 40, 85, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-link:hover {
+  background: rgba(92, 51, 68, 0.1);
+  color: rgba(52, 152, 219, 0.9) !important;
+  transform: translateX(0px);
+  border-left: 3px solid rgba(52, 152, 219, 0.5);
+  text-decoration: none;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+.nav-link.active {
+  left: 0%;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.15), rgba(41, 128, 185, 0.2));
+  color: #3498db !important;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  box-shadow: 
+    0 4px 15px rgba(52, 152, 219, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.nav-link.active i {
+  color: #3498db;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+  animation: pulse-icon 2s infinite;
+}
+
+@keyframes pulse-icon {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Creative active indicator triangle */
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 8px solid #3498db;
+  animation: slide-in 0.3s ease-out;
+  z-index: 1;
+}
+
+@keyframes slide-in {
+  from {
+    left: -5px;
+    opacity: 0;
+  }
+  to {
+    left: -5px;
+    opacity: 1;
+  }
+}
+
+/* Glow effect for active navigation */
+.nav-link.active {
+  position: relative;
+  background-image: 
+  linear-gradient(135deg, rgba(52, 152, 219, 0.15), rgba(41, 128, 185, 0.2)),
+  repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.05) 2px,
+    rgba(255, 255, 255, 0.05) 4px
+  );
+}
+
+.nav-link.active {
+  background-image: 
+  linear-gradient(135deg, rgba(52, 152, 219, 0.15), rgba(41, 128, 185, 0.2)),
+  repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.05) 2px,
+    rgba(255, 255, 255, 0.05) 4px
+  );
+}
+
+/* Enhanced hover effect with ripple */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(52, 152, 219, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 0;
+}
+
+.nav-link:hover::after {
+  width: 200px;
+  height: 200px;
+}
+
+.nav-link i, .nav-link span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation icons enhancement */
+.nav-link i {
+  transition: all 0.3s ease;
+  margin-right: 0.75rem;
+  width: 20px;
+  text-align: center;
+}
+
+.nav-link:hover i {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.nav-link.active i {
+  transform: rotate(0deg) scale(1.15);
+  filter: drop-shadow(0 0 5px rgba(52, 152, 219, 0.5));
+}
+
+/* Special effects for specific navigation items */
+.nav-link[onclick*="management-user"].active i {
+  animation: rotate-users 2s infinite linear;
+}
+
+.nav-link[onclick*="user-history"].active i {
+  animation: tick-history 1s infinite ease-in-out;
+}
+
+.nav-link[onclick*="sensor-data"].active i {
+  animation: pulse-sensor 1.5s infinite ease-in-out;
+}
+
+@keyframes rotate-users {
+  0%, 90%, 100% { transform: rotate(0deg) scale(1.15); }
+  5% { transform: rotate(5deg) scale(1.15); }
+}
+
+@keyframes tick-history {
+  0%, 50%, 100% { transform: scale(1.15); }
+  25%, 75% { transform: scale(1.25); }
+}
+
+@keyframes pulse-sensor {
+  0%, 100% { 
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 5px rgba(52, 152, 219, 0.5));
+  }
+  50% { 
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 10px rgba(52, 152, 219, 0.8));
+  }
+}
+
+/* Badge indicator for active section */
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #3498db;
+  border-radius: 50%;
+  animation: fade-pulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes fade-pulse {
+  0%, 100% { 
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: translateY(-50%) scale(1.3);
+  }
+}
+
+/* Enhanced brand logo styling */
+#navbrand-color {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: none;
+  position: relative;
+  text-decoration: none;
+}
+
+#navbrand-color::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3498db, transparent);
+  border-radius: 1px;
+}
+
+/* Sidebar enhancement */
+.bg-light {
+  background: linear-gradient(180deg, 
+    rgba(248, 249, 250, 0.95), 
+    rgba(233, 236, 239, 0.95)) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(52, 152, 219, 0.1) !important;
+}
+
+/* Pagination Styles */
+.pagination {
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
+  --bs-pagination-font-size: 0.875rem;
+  --bs-pagination-color: #495057;
+  --bs-pagination-bg: rgba(255, 255, 255, 0.8);
+  --bs-pagination-border-width: 1px;
+  --bs-pagination-border-color: rgba(52, 152, 219, 0.2);
+  --bs-pagination-border-radius: 0.375rem;
+  --bs-pagination-hover-color: #3498db;
+  --bs-pagination-hover-bg: rgba(52, 152, 219, 0.1);
+  --bs-pagination-hover-border-color: rgba(52, 152, 219, 0.3);
+  --bs-pagination-focus-color: #3498db;
+  --bs-pagination-focus-bg: rgba(52, 152, 219, 0.1);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: #3498db;
+  --bs-pagination-active-border-color: #3498db;
+  --bs-pagination-disabled-color: #6c757d;
+  --bs-pagination-disabled-bg: rgba(255, 255, 255, 0.5);
+  --bs-pagination-disabled-border-color: rgba(52, 152, 219, 0.1);
+}
+
+.pagination .page-link {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+.pagination .page-item.active .page-link {
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Entries selector styling */
+.form-select-sm {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(52, 152, 219, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-select-sm:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Pagination info styling */
+#user-pagination-info,
+#nfc-pagination-info,
+#sensor-pagination-info {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* COMPLETE TABLE BORDER AND OUTLINE REMOVAL */
+/* Override ALL Bootstrap and custom table styling */
+
+/* Remove borders from ALL table elements - comprehensive coverage */
+table,
+.table,
+.table-striped,
+.table-bordered,
+.table-hover,
+.table-sm,
+.table-responsive table,
+.table-container table,
+.table-container .table,
+.table-container .table-striped,
+.table > thead,
+.table > tbody,
+.table > tfoot,
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr,
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td,
+table > thead,
+table > tbody,
+table > tfoot,
+table > thead > tr,
+table > tbody > tr,
+table > tfoot > tr,
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  outline: 0 !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove any possible pseudo-element borders */
+table::before,
+table::after,
+.table::before,
+.table::after,
+th::before,
+th::after,
+td::before,
+td::after,
+tr::before,
+tr::after {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure table containers and wrappers have no borders */
+/* But keep the glassmorphism shadows for containers */
+.table-responsive,
+.table-container .table-responsive,
+.table-container > div,
+.table-wrapper {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Keep glassmorphism shadows for table containers */
+.table-container {
+  border: none !important;
+  outline: none !important;
+  /* Restore the beautiful glassmorphism shadows */
+  box-shadow: 0 4px 20px 0 rgba(9, 53, 81, 0.25) !important;
+}
+
+.table-container:hover {
+  box-shadow: 0 6px 25px 0 rgba(9, 53, 81, 0.3) !important;
+}
+
+/* Remove focus states that might show borders */
+table:focus,
+.table:focus,
+th:focus,
+td:focus,
+tr:focus,
+thead:focus,
+tbody:focus,
+tfoot:focus,
+.table-responsive:focus,
+.table-container:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Additional Bootstrap overrides */
+.table-striped > tbody > tr:nth-of-type(odd) > td,
+.table-striped > tbody > tr:nth-of-type(odd) > th,
+.table-striped > tbody > tr:nth-of-type(even) > td,
+.table-striped > tbody > tr:nth-of-type(even) > th {
+  border: none !important;
+}
+
+/* Override any remaining Bootstrap table cell borders */
+.table td,
+.table th,
+.table-striped td,
+.table-striped th,
+.table-bordered td,
+.table-bordered th {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Force remove any inherited borders */
+* > table,
+* > .table,
+* > table *,
+* > .table * {
+  border: none !important;
+}
+
+/* Fixed sidebar and scrollable content styles */
+.sidebar-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.main-content-scrollable {
+  margin-left: 17vw !important;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Ensure sidebar stays within viewport bounds */
+@media (max-width: 768px) {
+  .main-content-scrollable {
+    margin-left: 180px !important;
+  }
+}
+
+/* Smooth scrolling for main content */
+.main-content-scrollable {
+  scroll-behavior: smooth;
+}
+
+
+.logo-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 80px; /* Membatasi ukuran maksimal logo */
+}
+
+.base-image {
+    position: relative;
+    left: -25%;
+    /* transform: translate(-50%, -50%); */
+    width: 150px;
+    height: auto;
+    max-width: 350px; /* Logo lebih kecil */
+}
+
+.gear-image {
+    position: absolute;
+    top: 75%;
+    left: 58.3%;
+    transform: translate(-50%, -50%);
+    width: 43px; /* Gear lebih kecil dari 200px */
+    height: auto;
+    z-index: 10;
+    animation: pullUp 0.8s ease-out forwards, rotate 6s linear infinite 1.2s;
+}
+
+/* Animasi untuk gerak dari bawah ke atas (hanya sekali) */
+@keyframes pullUp {
+    0% {
+        transform: translate(-50%, 20%) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk rotasi 360 (berulang terus) */
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

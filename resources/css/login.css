@@ -1,0 +1,42 @@
+/* Login Page Styles */
+.home-background {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #4fbaf3d0, #9dcee8d0, #e2eaee, #add7ed, #4fbaf3d0);
+    background-size: 400% 400%; 
+    animation: animate-background 8s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: rgb(6, 39, 63);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: 0.2s;
+  border-radius: 3rem;
+}
+
+.btn-login:hover {
+  background-color: #e2eaee;
+  color: #04141d;
+  outline: 1px solid #061d297c;
+}
+
+.btn-outline-custom.log-home-button {
+  background-color: rgb(6, 39, 63);
+  color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 1px 10px 0 rgba(2, 47, 69, 0.272);
+  outline: 1px solid #061d297c;
+  font-size: small;
+  width: 180px;
+}
+
+.log-home-button:hover {
+  background-color: #e2eaee;
+  color: #04141d;
+  outline: 1px solid #061d297c;
+}

@@ -1,0 +1,486 @@
+/* THIS IS CSS FOR HOME, LOGIN, REGISTER, and ABOUT PAGES */
+/* CHECK OUT THE OTHER ONE FOR DASHBOARD */
+
+/* OVERALL */
+
+body {
+  font-family: 'Montserrat';
+}
+
+/* PAGE HOME */
+/* HOME BACKGROUND */
+
+.home-background {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #4fbaf3d0, #9dcee8d0, #e2eaee, #add7ed, #4fbaf3d0);
+    background-size: 400% 400%; 
+    animation: animate-background 8s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+@keyframes animate-background {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* NAVBAR */
+
+.navbar-bg-custom {
+    background: rgba(184, 217, 235, 0.19);
+    backdrop-filter: blur(15px);
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 1px 5px 0 rgba(2, 47, 69, 0.272);
+}
+
+#navbrand-color {
+    color:rgb(6, 39, 63);
+}
+
+.navbar-brand {
+    font-size: large;
+}
+
+a.nav-link {
+    font-weight: 600;
+    color: rgba(6, 39, 63, 0.5);
+    border-radius: 5px;
+    text-decoration: none;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+a.nav-link:hover {
+    background-color: rgba(63, 188, 255, 0.634);
+}
+
+a.active {
+    color:#e2eaee;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.467);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(63, 188, 255, 0.634);
+}
+
+/* page home */
+
+#greeting {
+    font-weight: 700;
+    color: rgba(2, 12, 20, 0.800);
+}
+
+.animated-load {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeUpAnim 1s ease-out forwards;
+  }
+  
+  @keyframes fadeUpAnim {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* /Fade-in-out color/ */
+
+#brand, #brand-section, #team-section {
+    color: rgba(2, 12, 20, 0.619);
+    animation: blinkColor 2s infinite alternate;
+  }
+
+  @keyframes blinkColor {
+    from {
+      color: rgba(2, 12, 20, 0.800);
+    }
+    to {
+      color: rgb(41, 161, 231);
+    }
+  }
+
+/* Description */
+
+.compact-sides {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.btn-outline-custom.login-button {
+  background-color: #e2eaee;
+  border-radius: 2rem;
+  box-shadow: 0 1px 10px 0 rgba(2, 47, 69, 0.272);
+  outline: 1px solid #061d297c;
+}
+
+.highlight {
+  color: rgba(49, 183, 255, 0.82);
+  font-weight: 600;
+}
+
+  @media (max-width: 576px) {
+    .home-desc {
+    font-size: small;
+    }
+  }
+
+/* Main Login Button */
+
+.login-button {
+  font-size: medium;
+  width: 200px;
+}
+
+.login-button:hover {
+  background-color: rgba(15, 171, 255, 0.438);
+  font-size: medium;
+  width: 200px;
+}
+
+.animated-load-h {
+    opacity: 0;
+    transform: translateX(-60px);
+    animation: fadeInAnim 1.1s ease-out forwards;
+  }
+  
+  @keyframes fadeInAnim {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/* LOGIN PAGE */
+
+.login-container {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.199);
+  border-radius: 1rem;
+  box-shadow: 0 1px 10px 0 rgba(9, 53, 81, 0.327);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(65, 65, 65, 0.18);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  z-index: 1;
+}
+
+.login-title, .register-title {
+      font-size: 2.5rem;
+      font-family: 'Outfit';
+      color:rgb(6, 39, 63);
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+    }
+
+.form-control.login-form {
+  background-color:rgba(213, 213, 213, 0.411);
+  color: #010a0e;
+  border: 1px solid rgb(55, 55, 55);
+  border-radius: 3rem;
+  font-size: small;
+}
+
+.form-control.login-form::placeholder {
+  color: #010a0e;
+}
+
+/* /Submit Login button/ */
+
+.btn-login {
+  width: 100%;
+  background-color: rgb(6, 39, 63);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: 0.2s;
+  border-radius: 3rem;
+}
+
+.btn-login:hover {
+  background-color: #e2eaee;
+  color: #04141d;
+  outline: 1px solid #061d297c;
+}
+
+  @media (max-width: 576px) {
+    .login-container {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+    .login-title {
+        font-size: 2rem;
+    }
+ }
+
+/* Back to Homepage button in login page*/
+
+.btn-outline-custom.log-home-button {
+  background-color: rgb(6, 39, 63);
+  color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 1px 10px 0 rgba(2, 47, 69, 0.272);
+  outline: 1px solid #061d297c;
+  font-size: small;
+  width: 180px;
+}
+
+.log-home-button:hover {
+  background-color: #e2eaee;
+  color: #04141d;
+  outline: 1px solid #061d297c;
+}
+
+/* REGISTER PAGE */
+
+/* Register Background */
+.register-background {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #01456a, #04334c, #010a0e, #04334c, #01456a);
+    background-size: 400% 400%; 
+    animation: animate-background 8s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+/* Register Container */
+.register-container {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.199);
+  border-radius: 1rem;
+  box-shadow: 0 1px 10px 0 rgba(9, 53, 81, 0.327);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(65, 65, 65, 0.18);
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  z-index: 1;
+}
+
+.btn-register {
+  width: 55%;
+  background-color: #071e2a;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border: none;
+  transition: 0.2s;
+  border-radius: 3rem;
+}
+
+.btn-register:hover {
+  background-color: #e2eaee;
+  color: #071e2a;
+  outline: 1px solid #061d297c;
+}
+
+  @media (max-width: 576px) {
+    .login-container {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+    .login-title {
+        font-size: 2rem;
+    }
+ }
+
+.form-control.register-form {
+  background-color:rgba(213, 213, 213, 0.411);
+  border: 1px solid rgb(55, 55, 55);
+  border-radius: 5px;
+  font-size: small;
+}
+
+  @media (max-width: 576px) {
+    .form-control.register-form {
+    font-size: x-small;
+    }
+  }
+
+.form-control.register-form::placeholder {
+  color: #010a0e;
+}
+
+/* Back to Homepage button in register page */
+
+.btn-outline-custom.reg-home-button {
+  background-color: #e2eaee;
+  color: #04141d;
+  border-radius: 2rem;
+  box-shadow: 0 1px 10px 0 rgba(2, 47, 69, 0.272);
+  outline: 1px solid #061d297c;
+  font-size: small;
+  width: 180px;
+}
+
+.reg-home-button:hover {
+  background-color: #04141d;
+  color: #e2eaee;
+}
+
+/* ABOUT PAGE */
+
+/* About title and description */
+
+#about-title {
+    font-weight: 700;
+    color: rgba(2, 12, 20, 0.800);
+}
+
+/* About cards */
+
+.members {
+  padding: 10px;
+}
+
+.card {
+  max-width: 300px;
+  margin: 0 10px 0 10px;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.471);
+  box-shadow: 0 1px 10px 0 rgba(9, 53, 81, 0.327);
+  backdrop-filter: blur(30px);
+}
+
+.card-title {
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.card-column {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .col-md-auto {
+        width: 80%;
+    }
+}
+
+.desc-box {
+  background-color: #e2eaee;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 10px 0 rgba(9, 53, 81, 0.327);
+}
+
+  @media (max-width: 580px) {
+    .desc-box {
+      width: 90%;
+    }
+  }
+
+.card-components {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Dashboard Adjustments */
+@media (max-width: 768px) {
+  /* Stack sidebar and content vertically */
+  .container-fluid.d-flex {
+    flex-direction: column !important;
+  }
+  /* Sidebar full width */
+  .container-fluid.d-flex > .bg-light {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+  /* Navigation items horizontal on small screens */
+  .container-fluid.d-flex > .bg-light .nav.flex-column {
+    flex-direction: row !important;
+    justify-content: space-around;
+  }
+  .container-fluid.d-flex > .bg-light .nav-item {
+    margin-bottom: 0 !important;
+    flex: 1;
+    text-align: center;
+  }
+  /* Main content full width with padding */
+  .container-fluid.d-flex > .flex-grow-1 {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  /* Allow tables to scroll horizontally on small screens */
+  .table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .table th, .table td {
+    white-space: nowrap;
+  }
+}
+
+/* Dashboard tables mimic register container style */
+.table.table-striped,
+.table.table-bordered {
+  background: rgba(255, 255, 255, 0.199);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px 0 rgba(9, 53, 81, 0.327);
+  border-radius: 1rem !important;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+/* Optional: clear default striping to let container bg show */
+.table.table-striped tbody tr:nth-child(odd) {
+  background: transparent;
+}
+.table.table-striped tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure table headers stand out */
+.table thead th {
+  background: rgba(6, 31, 46, 0.7);
+  color: #fff;
+  border-bottom: none;
+}
+
+/* Hide outer table border, keep inner cell borders */
+.table.table-striped,
+.table.table-bordered {
+  border: none !important;
+}
+.table.table-striped th,
+.table.table-striped td,
+.table.table-bordered th,
+.table.table-bordered td {
+  border: 1px solid rgba(110, 110, 110, 0.18) !important;
+}
